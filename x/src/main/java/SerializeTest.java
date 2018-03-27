@@ -7,5 +7,6 @@ public class SerializeTest {
     public static void main(String[] args) throws FileNotFoundException, IOException{
         FileOutputStream fileOutputStream = new FileOutputStream("temp.out");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        System.out.println("x");
     }
 }
