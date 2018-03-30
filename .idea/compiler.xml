@@ -8,15 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="client" />
         <module name="interface" />
+        <module name="serialize" />
         <module name="server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="client" target="1.5" />
-      <module name="interface" target="1.5" />
-      <module name="server" target="1.5" />
-      <module name="test" target="1.5" />
-      <module name="x" target="1.5" />
+      <module name="client" target="1.8" />
+      <module name="interface" target="1.8" />
+      <module name="serialize" target="1.8" />
+      <module name="server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
