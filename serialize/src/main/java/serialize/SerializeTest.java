@@ -51,7 +51,7 @@ public class SerializeTest implements Serializable{
         System.out.println("" + inStudent.getName());
         System.out.println("" + inStudent.getClassNo());*/
 
-        Children children = new Children();
+        /*Children children = new Children();
         children.setId("1");
         children.setSex("male");
         System.out.println(children.getId());
@@ -61,8 +61,8 @@ public class SerializeTest implements Serializable{
         objectOutputStream.close();
 
         Children inChildren = (Children) objectInputStream.readObject();
-        System.out.println("" + inChildren.getId());
-        System.out.println("" + inChildren.getSex());
+        System.out.println("反序列化结果：" + inChildren.getId());
+        System.out.println("反序列化结果：" + inChildren.getSex());*/
 
         /*SerializeTest serializeTest = new SerializeTest();
         objectOutputStream.writeObject(serializeTest);
@@ -74,6 +74,23 @@ public class SerializeTest implements Serializable{
         SerializeTest inSerializeTest = (SerializeTest)objectInputStream.readObject();
         objectInputStream.close();
         System.out.println(inSerializeTest.staticVar);*/
+
+        Person test = new Person();
+        //试图将对象两次写入文件
+        objectOutputStream.writeObject(test);
+        objectOutputStream.flush();
+        System.out.println(new File("temp.out").length());
+        objectOutputStream.writeObject(test);
+        objectOutputStream.close();
+        System.out.println(new File("temp.out").length());
+
+        //从文件依次读出两个文件
+        Person p1 = (Person) objectInputStream.readObject();
+        Person p2 = (Person) objectInputStream.readObject();
+        objectInputStream.close();
+
+        //判断两个引用是否指向同一个对象
+        System.out.println(p1 == p2);
 
     }
 

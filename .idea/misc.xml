@@ -7,7 +7,6 @@
         <option value="$PROJECT_DIR$/server/pom.xml" />
         <option value="$PROJECT_DIR$/interface/pom.xml" />
         <option value="$PROJECT_DIR$/serialize/pom.xml" />
-        <option value="$PROJECT_DIR$/proxy/pom.xml" />
       </list>
     </option>
   </component>

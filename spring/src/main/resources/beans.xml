@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentBean" class="x.StudentBean" init-method="myInit" destroy-method="myDestroy" scope="singleton">
+        <property name="name" value="xia"></property>
+        <property name="age" value="21"></property>
+    </bean>
+
+    <bean id="beanPostProcessor" class="x.MyBeanPostProcessor" ></bean>
+
+    <bean id="instantiationAwareBeanPostProcessor" class="x.MyInstantiationAwareBeanPostProcessor" ></bean>
+
+    <bean id="beanFactoryPostProcessor" class="x.MyBeanPostProcessor" ></bean>
+
+</beans>
