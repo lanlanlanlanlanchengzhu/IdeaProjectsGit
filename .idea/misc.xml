@@ -9,6 +9,9 @@
         <option value="$PROJECT_DIR$/serialize/pom.xml" />
         <option value="$PROJECT_DIR$/spring/pom.xml" />
         <option value="$PROJECT_DIR$/Design pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/Algorithm/pom.xml" />
+        <option value="$PROJECT_DIR$/nio/pom.xml" />
+        <option value="$PROJECT_DIR$/method/pom.xml" />
       </list>
     </option>
   </component>
