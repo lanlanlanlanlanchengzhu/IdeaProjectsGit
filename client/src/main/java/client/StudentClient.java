@@ -11,7 +11,7 @@ public class StudentClient {
     public static void main(String[] argv)
     {
         try
-        {
+        {Object
             StudentInter stu = (StudentInter) Naming.lookup("stu");
 
             //如果要从另一台启动了RMI注册服务的机器上查找hello实例
