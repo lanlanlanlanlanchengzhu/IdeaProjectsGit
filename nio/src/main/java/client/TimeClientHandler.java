@@ -11,7 +11,7 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
     private byte[] req;
 
     public TimeClientHandler(){
-        req = ("UQERY TIME ORDER" + System.getProperty("line.separator")).getBytes();
+        req = ("QUERY TIME ORDER" + System.getProperty("line.separator")).getBytes();
     }
 
     @Override
@@ -22,6 +22,12 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
             message.writeBytes(req);
             ctx.writeAndFlush(message);
         }
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg){
+        String body = String.valueOf(msg);
+        System.out.println("now is : " + body);
     }
 
     @Override
