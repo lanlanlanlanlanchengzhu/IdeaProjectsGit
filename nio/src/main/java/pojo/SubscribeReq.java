@@ -9,19 +9,31 @@ import java.io.Serializable;
  **/
 public class SubscribeReq implements Serializable {
     private static final long serialVersionUID = 1L;
+
     //订购编号
     int subReqId;
-    //返回码
-    int respCode;
-    //返回信息
+    //用户名
+    String userName;
+    //产品名称
+    String productName;
+    //电话号码
+    String phoneNumber;
+    //地址
+    String address;
 
     @Override
     public String toString() {
         return "SubscribeReq{" +
                 "subReqId=" + subReqId +
-                ", respCode=" + respCode +
-                ", respMsg='" + respMsg + '\'' +
+                ", userName='" + userName + '\'' +
+                ", productName='" + productName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
                 '}';
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
     public int getSubReqId() {
@@ -32,21 +44,36 @@ public class SubscribeReq implements Serializable {
         this.subReqId = subReqId;
     }
 
-    public int getRespCode() {
-        return respCode;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setRespCode(int respCode) {
-        this.respCode = respCode;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getRespMsg() {
-        return respMsg;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setRespMsg(String respMsg) {
-        this.respMsg = respMsg;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    String respMsg;
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 }

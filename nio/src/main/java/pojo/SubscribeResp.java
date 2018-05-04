@@ -9,31 +9,19 @@ import java.io.Serializable;
  **/
 public class SubscribeResp implements Serializable {
     private static final long serialVersionUID = 1L;
-
     //订购编号
     int subReqId;
-    //用户名
-    String userName;
-    //产品名称
-    String productName;
-    //电话号码
-    String phoneNumber;
-    //地址
-    String address;
+    //返回码
+    int respCode;
+    //返回信息
 
     @Override
     public String toString() {
         return "SubscribeResp{" +
                 "subReqId=" + subReqId +
-                ", userName='" + userName + '\'' +
-                ", productName='" + productName + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", address='" + address + '\'' +
+                ", respCode=" + respCode +
+                ", respMsg='" + respMsg + '\'' +
                 '}';
-    }
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
     }
 
     public int getSubReqId() {
@@ -44,36 +32,21 @@ public class SubscribeResp implements Serializable {
         this.subReqId = subReqId;
     }
 
-    public String getUserName() {
-        return userName;
+    public int getRespCode() {
+        return respCode;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setRespCode(int respCode) {
+        this.respCode = respCode;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getRespMsg() {
+        return respMsg;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setRespMsg(String respMsg) {
+        this.respMsg = respMsg;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
+    String respMsg;
 }
