@@ -43,7 +43,7 @@ public class SubReqClient {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        int port = 8060;
+        int port = 8050;
         if(null != args && args.length > 0){
             try{
                 port = Integer.valueOf(args[0]);
