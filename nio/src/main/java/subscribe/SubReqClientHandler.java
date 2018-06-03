@@ -4,6 +4,8 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import pojo.SubscribeReq;
+import pojo.SubscribeResp;
 
 public class SubReqClientHandler extends ChannelHandlerAdapter {
 
@@ -16,18 +18,25 @@ public class SubReqClientHandler extends ChannelHandlerAdapter {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx){
-        ByteBuf message = null;
-        for (int i = 0; i < 100; i++) {
-            message = Unpooled.buffer(req.length);
-            message.writeBytes(req);
-            ctx.writeAndFlush(message);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(req(i));
+            ctx.writeAndFlush(req(i));
         }
+    }
+
+    private SubscribeReq req (int subSeqId){
+        SubscribeReq req = new SubscribeReq();
+        req.setSubReqId(subSeqId);
+        req.setUserName("xiasiyu");
+        req.setAddress("辽宁阜新");
+        req.setPhoneNumber("13099990000");
+        return req;
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg){
-        String body = String.valueOf(msg);
-        System.out.println("now is : " + body);
+        SubscribeResp res = (SubscribeResp) msg;
+        System.out.println("res is : " + res);
     }
 
     @Override
