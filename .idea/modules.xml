@@ -12,6 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/serialize/serialize.iml" filepath="$PROJECT_DIR$/serialize/serialize.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/x/x.iml" filepath="$PROJECT_DIR$/x/x.iml" />
     </modules>
   </component>
 </project>
