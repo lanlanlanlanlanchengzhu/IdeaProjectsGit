@@ -8,4 +8,10 @@
     <artifactId>x</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <!-- 如果不指定如下配置 maven进行编译时会默认1.5 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
 </project>
