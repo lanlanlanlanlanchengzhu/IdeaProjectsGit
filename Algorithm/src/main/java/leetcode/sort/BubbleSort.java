@@ -15,7 +15,7 @@ public class BubbleSort {
      * @param origin
      * @return
      */
-    public void bubble (int[] origin) {
+    public void bubble(int[] origin) {
 
         // 操作n次
         for (int i = 0; i < origin.length; i++) {
