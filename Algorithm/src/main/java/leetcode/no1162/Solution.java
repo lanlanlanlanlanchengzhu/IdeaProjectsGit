@@ -35,6 +35,7 @@ public class Solution {
     
     private int getMinDistance (int[][] grid, int row, int col) {
 
+        // !!!方向数组，棋盘问题标准解决方案，遍历即可访问四个方向
         int [][] direction = new int[][]{{-1,0},{1,0},{0,-1},{0,1}};
 
         // !!!记录已经访问过的节点
