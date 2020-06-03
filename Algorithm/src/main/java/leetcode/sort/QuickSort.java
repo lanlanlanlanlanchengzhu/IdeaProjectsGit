@@ -33,7 +33,7 @@ public class QuickSort {
             if (i < j) {
                 // 赋值后指针前移
                 origin[j] = origin[i];
-                j --;
+                j--;
             }
         }
         // i=j
